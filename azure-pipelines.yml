@@ -26,10 +26,10 @@ steps:
 - task: Npm@1
   displayName: 'Run npm install'
   inputs:
-    verbose: true
+    verbose: false
 
 - script: './node_modules/.bin/node-sass $(wwwrootDir) --output $(wwwrootDir)'
-  displayName: 'Compile SASS assets'
+  displayName: 'Compile Sass assets'
 
 - task: gulp@1
   displayName: 'Run gulp tasks'
